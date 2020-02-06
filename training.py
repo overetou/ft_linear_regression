@@ -27,5 +27,8 @@ def train(f):
         wr.writerow([temp_t0, temp_t1])
 
 if __name__ == "__main__":
-    with open('data.csv', 'r') as f:
-        train(f)
+    try:
+        with open('data.csv', 'r') as f:
+            train(f)
+    except Exception as e:
+        print(e)
