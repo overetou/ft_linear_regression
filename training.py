@@ -19,7 +19,7 @@ def train(f):
             error_sum = error_sum + error
             error_sum_mult_km = error_sum_mult_km + (error * float(row[0]))
         #print('oldt0', temp_t0,'step0', learning_ratio * error_sum / m, 'oldt1', temp_t1, 'step1', learning_ratio * error_sum_mult_km / m)
-        temp_t0 = temp_t0 - 0.006 * error_sum / m
+        temp_t0 = temp_t0 - 0.005 * error_sum / m
         temp_t1 = temp_t1 - learning_ratio * error_sum_mult_km / m
         iterations = iterations - 1
     with open('trained_values.csv', 'w') as f:
